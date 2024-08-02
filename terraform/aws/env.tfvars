@@ -1,19 +1,19 @@
 # Environment name (ex: sandbox)
-CLUSTER_NAME = ""
+CLUSTER_NAME = "tf5"
 # MOSIP's domain (ex: sandbox.xyz.net)
-MOSIP_DOMAIN = ""
+MOSIP_DOMAIN = "tf5.mosip.net"
 # Email-ID will be used by certbot to notify SSL certificate expiry via email
-MOSIP_EMAIL_ID = ""
+MOSIP_EMAIL_ID = "syed.salman@technoforte.co.in"
 # SSH login key name for AWS node instances (ex: my-ssh-key)
-SSH_KEY_NAME = ""
+SSH_KEY_NAME = "mosip-aws"
 # The AWS region for resource creation
-AWS_PROVIDER_REGION = ""
+AWS_PROVIDER_REGION = "ap-south-1"
 # The instance type for Kubernetes nodes
-K8S_INSTANCE_TYPE = ""
+K8S_INSTANCE_TYPE = "t2.medium"
 # The instance type for Nginx server
-NGINX_INSTANCE_TYPE = ""
+NGINX_INSTANCE_TYPE = "t2.micro"
 # The Route 53 hosted zone ID
-ZONE_ID = ""
+ZONE_ID = "Z090954828SJIEL6P5406"
 ## UBUNTU 20.04
 #AMI                 = "ami-0a7cf821b91bcccbc"
 ## UBUNTU 24.04
@@ -36,7 +36,7 @@ K8S_CONTROL_PLANE_NODE_COUNT = 2
 # ETCD, Worker
 K8S_ETCD_NODE_COUNT = 2
 # Worker
-K8S_WORKER_NODE_COUNT = 2
+K8S_WORKER_NODE_COUNT = 3
 
 # Rancher Import URL
-RANCHER_IMPORT_URL = "\"\""
+RANCHER_IMPORT_URL = "\"kubectl apply -f https://rancher.mosip.net/v3/import/r74zlfmfgt6ls6tt7zrqb82q2zpkfd26nk6vbcv7hjkw8snkg4fl9h_c-m-ctfxcmp5.yaml\""
