@@ -32,11 +32,11 @@ NGINX_NODE_EBS_VOLUME_SIZE = "50"
 K8S_INSTANCE_ROOT_VOLUME_SIZE = "20"
 
 # Control-plane, ETCD, Worker
-K8S_CONTROL_PLANE_NODE_COUNT = 2
+K8S_CONTROL_PLANE_NODE_COUNT = 3
 # ETCD, Worker
 K8S_ETCD_NODE_COUNT = 2
 # Worker
-K8S_WORKER_NODE_COUNT = 2
+K8S_WORKER_NODE_COUNT = 3
 
 # Rancher Import URL
 RANCHER_IMPORT_URL = "\"kubectl apply -f https://rancher.mosip.net/v3/import/tm7lqmw9sbzvslbfctncbpbx468cj8wqmqk22wvbljgzdhncmjbwfc_c-m-d2z4679w.yaml\""
