@@ -38,9 +38,9 @@ locals {
     RANCHER_IMPORT_URL          = var.RANCHER_IMPORT_URL
   }
   # Filter out CONTROL_PLANE_NODE_1 from K8S_CLUSTER_PUBLIC_IPS
-#   K8S_CLUSTER_PRIVATE_IPS_EXCEPT_CONTROL_PLANE_NODE_1 = {
-#     for key, value in var.K8S_CLUSTER_PRIVATE_IPS : key => value if value != local.CONTROL_PLANE_NODE_1
-#   }
+  #   K8S_CLUSTER_PRIVATE_IPS_EXCEPT_CONTROL_PLANE_NODE_1 = {
+  #     for key, value in var.K8S_CLUSTER_PRIVATE_IPS : key => value if value != local.CONTROL_PLANE_NODE_1
+  #   }
 
   datetime = formatdate("2006-01-02_15-04-05", timestamp())
   backup_command = [
@@ -56,9 +56,9 @@ locals {
 }
 
 resource "null_resource" "rke2-primary-cluster-setup" {
-#   triggers = {
-#     node_hash = md5(local.K8S_CLUSTER_PRIVATE_IPS_STR)
-#   }
+  #   triggers = {
+  #     node_hash = md5(local.K8S_CLUSTER_PRIVATE_IPS_STR)
+  #   }
   connection {
     type        = "ssh"
     host        = local.CONTROL_PLANE_NODE_1
@@ -86,7 +86,7 @@ resource "null_resource" "rke2-cluster-setup" {
   triggers = {
     # node_count_or_hash = module.ec2-resource-creation.node_count
     # or if you used hash:
-    node_hash = md5(local.K8S_CLUSTER_PRIVATE_IPS_STR)
+    node_hash   = md5(local.K8S_CLUSTER_PRIVATE_IPS_STR)
     script_hash = filemd5("${path.module}/rke2-setup.sh")
   }
   connection {
