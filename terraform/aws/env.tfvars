@@ -1,41 +1,42 @@
 # Environment name (ex: sandbox)
-CLUSTER_NAME = ""
+CLUSTER_NAME = "tf8"
 # MOSIP's domain (ex: sandbox.xyz.net)
-MOSIP_DOMAIN = ""
+MOSIP_DOMAIN = "tf8.mosip.net"
 # Email-ID will be used by certbot to notify SSL certificate expiry via email
-MOSIP_EMAIL_ID = ""
+MOSIP_EMAIL_ID = "syed.salman@technoforte.co.in"
 # SSH login key name for AWS node instances (ex: my-ssh-key)
-SSH_KEY_NAME = ""
+SSH_KEY_NAME = "mosip-aws"
 # The AWS region for resource creation
-AWS_PROVIDER_REGION = ""
+AWS_PROVIDER_REGION = "ap-south-1"
 # The instance type for Kubernetes nodes
 K8S_INSTANCE_TYPE = "t3a.2xlarge"
 # The instance type for Nginx server
 NGINX_INSTANCE_TYPE = "t3a.medium"
 # The Route 53 hosted zone ID
-ZONE_ID = ""
-
+ZONE_ID = "Z090954828SJIEL6P5406"
+## UBUNTU 20.04
+#AMI                 = "ami-0a7cf821b91bcccbc"
 ## UBUNTU 24.04
 # The Amazon Machine Image ID for the instances
 AMI = "ami-0ad21ae1d0696ad58"
 
 # Repo K8S-INFRA URL
-K8S_INFRA_REPO_URL = "https://github.com/mosip/k8s-infra.git"
+K8S_INFRA_REPO_URL = "https://github.com/syedsalman3753/k8s-infra.git"
 # Repo K8S-INFRA branch
 K8S_INFRA_BRANCH = "MOSIP-34911"
 # NGINX Node's Root volume size
-NGINX_NODE_ROOT_VOLUME_SIZE = "24"
+NGINX_NODE_ROOT_VOLUME_SIZE = "20"
 # NGINX node's EBS volume size
-NGINX_NODE_EBS_VOLUME_SIZE = "300"
+NGINX_NODE_EBS_VOLUME_SIZE = "50"
 # Kubernetes nodes Root volume size
-K8S_INSTANCE_ROOT_VOLUME_SIZE = "64"
+K8S_INSTANCE_ROOT_VOLUME_SIZE = "20"
 
 # Control-plane, ETCD, Worker
-K8S_CONTROL_PLANE_NODE_COUNT = 4
+K8S_CONTROL_PLANE_NODE_COUNT = 2
 # ETCD, Worker
 K8S_ETCD_NODE_COUNT = 2
 # Worker
-K8S_WORKER_NODE_COUNT = 2
+K8S_WORKER_NODE_COUNT = 4
 
 # Rancher Import URL
-RANCHER_IMPORT_URL = "\"kubectl apply -f <rancher-import-url>\""
+RANCHER_IMPORT_URL = "\"kubectl apply -f https://rancher.mosip.net/v3/import/9gq69dzvndgt9t46rsr96rkbxqkdjggtzt28xvscnmqxq4cpdzsp8v_c-m-m852gzg4.yaml\""
