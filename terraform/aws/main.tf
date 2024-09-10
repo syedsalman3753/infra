@@ -420,12 +420,12 @@ module "rke2-setup" {
 }
 
 module "nfs-setup" {
-  depends_on = [module.aws-resource-creation, module.rke2-setup]
-  source = "./modules/nfs-setup"
+  depends_on          = [module.aws-resource-creation, module.rke2-setup]
+  source              = "./modules/nfs-setup"
   NFS_SERVER_LOCATION = "/srv/nfs/mosip/${var.MOSIP_DOMAIN}"
-  NFS_SERVER = module.aws-resource-creation.NGINX_PRIVATE_IP
-  SSH_PRIVATE_KEY=var.SSH_PRIVATE_KEY
-  K8S_INFRA_REPO_URL = var.K8S_INFRA_REPO_URL
-  K8S_INFRA_BRANCH = var.K8S_INFRA_BRANCH
-  CLUSTER_NAME = var.CLUSTER_NAME
+  NFS_SERVER          = module.aws-resource-creation.NGINX_PRIVATE_IP
+  SSH_PRIVATE_KEY     = var.SSH_PRIVATE_KEY
+  K8S_INFRA_REPO_URL  = var.K8S_INFRA_REPO_URL
+  K8S_INFRA_BRANCH    = var.K8S_INFRA_BRANCH
+  CLUSTER_NAME        = var.CLUSTER_NAME
 }
