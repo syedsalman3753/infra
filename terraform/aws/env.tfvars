@@ -36,7 +36,7 @@ K8S_CONTROL_PLANE_NODE_COUNT = 2
 # ETCD, Worker
 K8S_ETCD_NODE_COUNT = 2
 # Worker
-K8S_WORKER_NODE_COUNT = 4
+K8S_WORKER_NODE_COUNT = 2
 
 # Rancher Import URL
 RANCHER_IMPORT_URL = "\"kubectl apply -f https://rancher.mosip.net/v3/import/f4sfqwp99rxl2gn8sb9sv79bd2hsn4gk9jx62lnv8z6pc5vkwh66nz_c-m-gphbjfbp.yaml\""
