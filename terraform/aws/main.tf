@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 locals {
-  DNS_RECORDS = { }
+  DNS_RECORDS = {}
 }
 
 module "aws-resource-creation" {
